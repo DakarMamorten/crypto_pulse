@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: crypto_pulse
+  datasource:
+
+    url: jdbc:postgresql://localhost:5432/crypto
+    username: postgres
+    password: postgres
+server:
+  port : 8081

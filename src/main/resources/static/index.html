@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+        }
+        header, footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .main {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 4fr 1fr;
+            gap: 1rem;
+            padding: 1rem;
+        }
+        .sidebar {
+            background-color: #ecf0f1;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+        .content {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            width: 100%;
+        }
+        .project {
+            background-color: #3498db;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .project:hover {
+            background-color: #2980b9;
+        }
+        .chat-box {
+            margin-top: 1rem;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            background-color: #fafafa;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Project Dashboard</h1>
+    </header>
+    <div class="main">
+        <div class="sidebar">
+            <h3>Login</h3>
+            <form>
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username" required><br><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required><br><br>
+                <button type="submit">Go</button>
+            </form>
+        </div>
+        <div class="content">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project">Project 1</div>
+                <div class="project">Project 2</div>
+                <div class="project">Project 3</div>
+                <div class="project">Project 4</div>
+                <div class="project">Project 5</div>
+                <div class="project">Project 6</div>
+            </div>
+            <div class="chat-box">
+                <h3>Chat</h3>
+                <textarea placeholder="Write something here..." rows="4" style="width:100%;"></textarea>
+            </div>
+        </div>
+        <div class="sidebar">
+            <h3>Logs</h3>
+            <ul>
+                <li>Log entry 1</li>
+                <li>Log entry 2</li>
+                <li>Log entry 3</li>
+                <li>Log entry 4</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>Footer content here</p>
+    </footer>
+</div>
+</body>
+</html>
